@@ -1,0 +1,82 @@
+PROJECT DETAILS :
+
+1.	Project Title
+Attendance Tracking System using Python
+
+2.	Problem Statement
+To design and develop a Python program that manages and tracks student attendance efficiently. The system should allow adding students, marking attendance, calculating attendance percentage, and displaying attendance reports.
+
+3.	Objective
+The objective of this project is to create a simple attendance management system using Python that stores attendance records and calculates attendance percentage using loops, functions, and conditional statements.
+
+
+4.	Tools Used
+Python IDLE / Python Compiler
+
+
+5.	Description
+•	This project is used to maintain student attendance digitally.
+•	The user can add student names.
+•	The user can mark attendance as Present (P) or Absent (A).
+•	The program stores attendance records.
+•	The system calculates attendance percentage.
+•	The program displays attendance report.
+
+6.	Algorithm
+1.	Start
+2.	Create an empty dictionary to store students
+3.	Display menu options
+4.	Add Student
+5.	Mark Attendance
+6.	View Attendance
+7.	Calculate Percentage
+8.	Exit
+9.	Read user choice
+10.	If choice = Add Student → Add name to dictionary
+11.	If choice = Mark Attendance → Store P/A status
+12.	If choice = View Attendance → Display attendance list
+13.	If choice = Calculate Percentage → Compute percentage
+14.	If choice = Exit → Stop program
+15.	Stop
+
+7.	Program (Python Code)
+
+print("------ Attendance Tracking System	")
+students = {}
+while True:
+print("\n1. Add Student") print("2. Mark Attendance") print("3. View Attendance") print("4. Calculate Percentage") print("5. Exit")
+choice = input("Enter your choice: ")
+if choice == "1":
+name = input("Enter student name: ")
+ 
+students[name] = []
+print("Student added successfully!")
+elif choice == "2":
+name = input("Enter student name: ") if name in students:
+status = input("Enter status (P/A): ").upper() students[name].append(status) print("Attendance marked!")
+else:
+print("Student not found!")
+elif choice == "3":
+name = input("Enter student name: ") if name in students:
+print("Attendance Record:", students[name]) else:
+print("Student not found!")
+elif choice == "4":
+name = input("Enter student name: ") if name in students:
+total = len(students[name])
+present = students[name].count("P") if total == 0:
+print("No attendance records available.") else:
+percentage = (present / total) * 100 print("Attendance Percentage:", percentage, "%")
+else:
+print("Student not found!")
+elif choice == "5": print("Exiting program...") break
+else:
+print("Invalid choice!")
+
+
+9.Result
+The Attendance Tracking System successfully manages student attendance records and calculates attendance percentage using Python programming concepts.
+
+10.Conclusion
+This project demonstrates how Python can be used to manage and track attendance efficiently. It improves understanding of dictionaries, loops, conditional statements, and functions in Python.
+
+ 
